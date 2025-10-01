@@ -1,0 +1,5 @@
+so iteration is similar to recursion 
+but based on the question we can use recursion  
+
+when you call a function then it creates a layer in stack ok and then the syso and recursive call
+so when the recursion is finished then it comes back to the main function 
