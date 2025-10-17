@@ -1,7 +1,7 @@
-so iteration is similar to recursion 
-but based on the question we can use recursion  
+so iteration is similar to recursion
+but based on the question we can use recursion
 
-when you call a function then it creates a layer in stack ok and then the syso and recursive call
-so when the recursion is finished then it comes back to the main function 
+when you call a function then it creates a layer in stack ok and then the sout and recursive call
+so when the recursion is finished then it comes back to the main function
 
 “When recursion calls itself, it doesn’t run the code after the call immediately. It first goes deeper into recursion. Then when it comes back (returns), it continues with the remaining lines in the previous stack frame.”
