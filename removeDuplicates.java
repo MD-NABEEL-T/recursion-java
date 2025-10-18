@@ -25,8 +25,8 @@ public class removeDuplicates{
     }
 }
 
-// explaination:
-// It’s basically doing:ASCII convertion ok
+// explanation:
+// It’s basically doing:ASCII conversion ok
 
 // Convert 'b' → 98
 // Convert 'a' → 97
