@@ -23,3 +23,5 @@ public class moveX{
         moveX(str,0,0,"");
     }
 }
+
+// time complexity:0(n) 
