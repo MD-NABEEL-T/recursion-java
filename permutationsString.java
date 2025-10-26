@@ -1,31 +1,29 @@
 public class PermutationsString {
 
-    public static void swap(char[] arr, int i, int j) {
-        char temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+    // swap characters i and j in a string and return the new string
+    public static String swap(String str, int i, int j) {
+        char[] chars = str.toCharArray(); // temporarily convert to array
+        char temp = chars[i];
+        chars[i] = chars[j];
+        chars[j] = temp;
+        return new String(chars);
     }
 
-    public static void permute(char[] arr, int idx) {
-        if (idx == arr.length) {
-            System.out.println(String.valueOf(arr));
+    public static void permute(String str, int idx) {
+        if (idx == str.length()) {
+            System.out.println(str);
             return;
         }
 
-        for (int i = idx; i < arr.length; i++) {
-            swap(arr, i, idx);           // choose
-            permute(arr, idx + 1);       // explore
-            swap(arr, i, idx);           // backtrack
+        for (int i = idx; i < str.length(); i++) {
+            str = swap(str, i, idx);      // swap i-th with idx-th
+            permute(str, idx + 1);        // recurse for next index
+            str = swap(str, i, idx);      // backtrack
         }
     }
 
     public static void main(String[] args) {
         String str = "abc";
-        permute(str.toCharArray(), 0);
+        permute(str, 0);
     }
 }
-// str.toCharArray() converts a String into a character array (char[]).
-
-// Why we do this: In Java, Strings are immutable, meaning you cannot change individual characters directly.
-
-// A char[] (character array) is mutable, so you can swap characters to generate permutations.
