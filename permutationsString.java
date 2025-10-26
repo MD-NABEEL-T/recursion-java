@@ -1,24 +1,26 @@
-public class permutationsString{
-    public static void swap(String str,int i,int j){
-        char temp=str.charAt(i);
-        str.charAt(i)=str.charAt(j);
-        str.charAt(j)=temp;
+public class PermutationsString {
+
+    public static void swap(char[] arr, int i, int j) {
+        char temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
-    public static void permute(String str,int idx){
-        if(idx==str.length){
-            System.out.println(currChar);
+
+    public static void permute(char[] arr, int idx) {
+        if (idx == arr.length) {
+            System.out.println(String.valueOf(arr));
             return;
         }
-        char currChar=str.charAt(idx);
-        for(int i=idx;i<nums.length;i++){
-            swap(str,i,idx);
-            permute(str,idx);
-            swap(str,i,idx);//backtracking
+
+        for (int i = idx; i < arr.length; i++) {
+            swap(arr, i, idx);           // choose
+            permute(arr, idx + 1);       // explore
+            swap(arr, i, idx);           // backtrack
         }
     }
 
-    public static void main(String []args){
-        String str="abc";
-        permute(str,0);
+    public static void main(String[] args) {
+        String str = "abc";
+        permute(str.toCharArray(), 0);
     }
 }
