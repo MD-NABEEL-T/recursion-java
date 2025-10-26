@@ -1,5 +1,4 @@
 public class PermutationsString {
-
     // swap characters i and j in a string and return the new string
     public static String swap(String str,int i ,int j){
         char []arr = str.toCharArray();
@@ -27,7 +26,6 @@ public class PermutationsString {
         permute(str, 0);
     }
 }
-
 // Convert string to array → char[] chars = str.toCharArray();
 // This is because strings are immutable, so we can’t swap directly.
 // Swap characters in the array → chars[i] ↔ chars[j]
