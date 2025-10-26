@@ -16,9 +16,9 @@ public class PermutationsString {
         }
 
         for (int i = idx; i < str.length(); i++) {
-            str = swap(str, i, idx);      // swap i-th with idx-th
-            permute(str, idx + 1);        // recurse for next index
-            str = swap(str, i, idx);      // backtrack
+            str = swap(str, i, idx);
+            permute(str, idx + 1);
+            str = swap(str, i, idx);
         }
     }
 
@@ -27,3 +27,8 @@ public class PermutationsString {
         permute(str, 0);
     }
 }
+
+// Convert string to array → char[] chars = str.toCharArray();
+// This is because strings are immutable, so we can’t swap directly.
+// Swap characters in the array → chars[i] ↔ chars[j]
+// Convert array back to string → new String(chars)
