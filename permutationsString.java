@@ -1,12 +1,12 @@
 public class PermutationsString {
 
     // swap characters i and j in a string and return the new string
-    public static String swap(String str, int i, int j) {
-        char[] chars = str.toCharArray(); // temporarily convert to array
-        char temp = chars[i];
-        chars[i] = chars[j];
-        chars[j] = temp;
-        return new String(chars);
+    public static String swap(String str,int i ,int j){
+        char []arr = str.toCharArray();
+        char temp=arr[i];
+        arr[i] = arr[j];
+        arr[j] =  temp;
+        return new String(arr);
     }
 
     public static void permute(String str, int idx) {
