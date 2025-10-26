@@ -24,3 +24,8 @@ public class PermutationsString {
         permute(str.toCharArray(), 0);
     }
 }
+// str.toCharArray() converts a String into a character array (char[]).
+
+// Why we do this: In Java, Strings are immutable, meaning you cannot change individual characters directly.
+
+// A char[] (character array) is mutable, so you can swap characters to generate permutations.
