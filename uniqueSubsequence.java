@@ -22,6 +22,7 @@ public static void subsequence(String str,int idx,String newString,HashSet<Strin
     public static void main(String []args){
         String str="aac";
         HashSet<String> set = new HashSet<>();
+        // it is used to store unique values
         subsequence(str,0,"",set);
     }
 }
