@@ -11,7 +11,7 @@ public class PermutationsString2{
         }
     }
     public static void main(String[] args){
-        String str="abc";
+        String str="ad";
         Permutation(str,"");
     }
 }
@@ -21,3 +21,14 @@ public class PermutationsString2{
 // Remaining letters = "bc"
 // → possible endings: bc, cb
 // → So: a + bc, a + cb
+
+// Permutation("abc","")
+//  ├─ i=0 → Permutation("bc","a")
+//  │    ├─ i=0 → Permutation("c","ab") → print abc
+//  │    └─ i=1 → Permutation("b","ac") → print acb
+//  ├─ i=1 → Permutation("ac","b")
+//  │    ├─ i=0 → Permutation("c","ba") → print bac
+//  │    └─ i=1 → Permutation("a","bc") → print bca
+//  └─ i=2 → Permutation("ab","c")
+//       ├─ i=0 → Permutation("b","ca") → print cab
+//       └─ i=1 → Permutation("a","cb") → print cba
