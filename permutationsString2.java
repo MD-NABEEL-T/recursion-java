@@ -15,3 +15,9 @@ public class PermutationsString2{
         Permutation(str,"");
     }
 }
+// You’d think like this:
+
+// First letter = a
+// Remaining letters = "bc"
+// → possible endings: bc, cb
+// → So: a + bc, a + cb
