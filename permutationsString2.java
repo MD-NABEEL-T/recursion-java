@@ -32,3 +32,9 @@ public class PermutationsString2{
 //  └─ i=2 → Permutation("ab","c")
 //       ├─ i=0 → Permutation("b","ca") → print cab
 //       └─ i=1 → Permutation("a","cb") → print cba
+
+// | i | remove which | substring(0,i) | substring(i+1) | newStr (combined) |
+// | - | ------------ | -------------- | -------------- | ----------------- |
+// | 0 | 'a'          | ""             | "bc"           | "bc"              |
+// | 1 | 'b'          | "a"            | "c"            | "ac"              |
+// | 2 | 'c'          | "ab"           | ""             | "ab"              |
