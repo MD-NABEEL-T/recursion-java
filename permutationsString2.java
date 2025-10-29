@@ -8,6 +8,8 @@ public class PermutationsString2{
             char currChar=str.charAt(i);
             String newStr=str.substring(0,i)+str.substring(i+1);
             Permutation(newStr,permutes+currChar);
+            // ("bc","a");
+            // currChar=b;then newStr()
         }
     }
     public static void main(String[] args){
